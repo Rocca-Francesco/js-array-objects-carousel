@@ -40,10 +40,13 @@ nextEl.addEventListener(
         // chiamo la funzione per decidere cosa mostrare
         positionCarouselToDecide(currentPosition);
         console.log(currentPosition);
+
+        // cambio la scritta in base alla posizione
+        images.forEach(positionTextToDecide);
     }
 )
 
-// prendo la mia freccia NEXT
+// prendo la mia freccia PREV
 const prevEl = document.getElementById("arrow-prev");
 
 prevEl.addEventListener(
@@ -51,6 +54,7 @@ prevEl.addEventListener(
     function () {
         // rimuovo il click
         currentPosition--;
+        console.log(currentPosition);
         // controllo di essere nel range del carosello
         if (currentPosition < 0) {
             currentPosition = maxPosition;
@@ -58,25 +62,35 @@ prevEl.addEventListener(
         // chiamo la funzione per decidere cosa mostrare
         positionCarouselToDecide(currentPosition);
         console.log(currentPosition);
+
+        // cambio la scritta in base alla posizione
+        images.forEach(positionTextToDecide);
     }
 )
 
 function positionCarouselToDecide(position) {
     // scelgo l'immagine di sfondo
     if (position == 0) {
-        corouselEl.classList.remove("backgroundFIVE");
+        corouselEl.classList.remove("backgroundFIVE", "backgroundTWO");
         corouselEl.classList.add("backgroundONE");
     } else if (position == 1) {
-        corouselEl.classList.remove("backgroundONE");
+        corouselEl.classList.remove("backgroundONE", "backgroundTHREE");
         corouselEl.classList.add("backgroundTWO");
     } else if (position == 2) {
-        corouselEl.classList.remove("backgroundTWO");
+        corouselEl.classList.remove("backgroundTWO", "backgroundFOUR");
         corouselEl.classList.add("backgroundTHREE");
     } else if (position == 3) {
-        corouselEl.classList.remove("backgroundTHREE");
+        corouselEl.classList.remove("backgroundTHREE", "backgroundFIVE");
         corouselEl.classList.add("backgroundFOUR");
     } else if (position == 4) {
-        corouselEl.classList.remove("backgroundFOUR");
+        corouselEl.classList.remove("backgroundFOUR", "backgroundONE");
         corouselEl.classList.add("backgroundFIVE");
+    }
+}
+
+function positionTextToDecide(game, index) {
+    // scelgo l'immagine di sfondo
+    if (index == currentPosition) {
+        corouselEl.innerHTML = `<h2>${game.title}</h2><p>${game.text}</p>`
     }
 }
