@@ -1,0 +1,49 @@
+#myCarousel {
+    width: 80vw;
+    height: 90vh;
+    position: relative;
+    background-color: grey;
+    margin: 5vh auto;
+}
+
+.arrows {
+    position: absolute;
+    font-size: 4rem;
+    color: white;
+}
+
+#arrow-previus {
+    top: 40%;
+    left: 2%;
+}
+
+#arrow-next {
+    top: 40%;
+    right: 2%;
+}
+
+.backgroundIMG {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.backgroundONE {
+    background-image: url("../img/01.webp");
+}
+
+.backgroundTWO {
+    background-image: url("../img/02.webp");
+}
+
+.backgroundTHREE {
+    background-image: url("../img/03.webp");
+}
+
+.backgroundFOUR {
+    background-image: url("../img/04.webp");
+}
+
+.backgroundFIVE {
+    background-image: url("../img/05.webp");
+}
