@@ -39,7 +39,6 @@ nextEl.addEventListener(
         }
         // chiamo la funzione per decidere cosa mostrare
         positionCarouselToDecide(currentPosition);
-        console.log(currentPosition);
 
         // cambio la scritta in base alla posizione
         images.forEach(positionTextToDecide);
@@ -61,12 +60,28 @@ prevEl.addEventListener(
         }
         // chiamo la funzione per decidere cosa mostrare
         positionCarouselToDecide(currentPosition);
-        console.log(currentPosition);
-
         // cambio la scritta in base alla posizione
         images.forEach(positionTextToDecide);
     }
 )
+
+// aggiungo l'opzione per far eseguire il carosello in automatico
+setInterval(function () {
+    // aggiungo il click
+    currentPosition++;
+    // controllo di essere nel range del carosello
+    if (currentPosition > maxPosition) {
+        currentPosition = 0;
+    }
+    // chiamo la funzione per decidere cosa mostrare
+    positionCarouselToDecide(currentPosition);
+    // cambio la scritta in base alla posizione
+    images.forEach(positionTextToDecide);
+}, 5000)
+
+/*******************************************
+ * FUNZIONI
+ * ******************************************/
 
 function positionCarouselToDecide(position) {
     // scelgo l'immagine di sfondo
