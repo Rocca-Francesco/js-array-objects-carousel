@@ -12,8 +12,8 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"
-        defer></script>
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -25,10 +25,26 @@
 </head>
 
 <body>
-    <section id="myCarousel" class="backgroundIMG backgroundFIVE">
-        <span id="arrow-previus" class="arrows"><i class="fa-solid fa-arrow-left"></i></span>
-        <span id="arrow-next" class="arrows"><i class="fa-solid fa-arrow-right"></i></span>
-    </section>
+    <div id="jumbo" class="container d-flex align-items-center">
+        <div class="row">
+            <div id="carouselBig"
+                class="col-10 d-flex flex-column justify-content-end text-end backgroundIMG backgroundONE">
+                <h2>Marvel's Spiderman Miles Morale</h2>
+                <p>Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to
+                    become his own
+                    Spider-Man.</p>
+            </div>
+            <div class="slideController col-2 p-0 d-flex flex-column">
+                <div class="arrows" id="arrow-prev"><i class="fa-solid fa-arrow-up"></i></div>
+                <div class="slideBox backgroundIMG disable backgroundONE"></div>
+                <div class="slideBox backgroundIMG backgroundTWO"></div>
+                <div class="slideBox backgroundIMG backgroundTHREE"></div>
+                <div class="slideBox backgroundIMG backgroundFOUR"></div>
+                <div class="slideBox backgroundIMG backgroundFIVE"></div>
+                <div class="arrows" id="arrow-next"><i class="fa-solid fa-arrow-down"></i></div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

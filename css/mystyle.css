@@ -1,28 +1,11 @@
-#myCarousel {
-    width: 80vw;
-    height: 90vh;
-    position: relative;
-    background-color: grey;
-    margin: 5vh auto;
-}
-
-.arrows {
-    position: absolute;
-    font-size: 4rem;
+#jumbo {
+    height: 100vh;
     color: white;
 }
 
-#arrow-previus {
-    top: 40%;
-    left: 2%;
-}
-
-#arrow-next {
-    top: 40%;
-    right: 2%;
-}
-
+/* background sezione grande */
 .backgroundIMG {
+    height: 16rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -46,4 +29,29 @@
 
 .backgroundFIVE {
     background-image: url("../img/05.webp");
+}
+
+/* background sezione piccola */
+.slideController {
+    position: relative;
+}
+
+.arrows {
+    position: absolute;
+    font-size: 1rem;
+    color: white;
+}
+
+#arrow-prev {
+    left: 45%;
+}
+
+#arrow-next {
+    bottom: 0;
+    left: 45%;
+}
+
+.slideBox {
+    width: 100%;
+    height: 20%;
 }
